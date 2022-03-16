@@ -13,19 +13,17 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
-    public int returnLastGrade(int lastGrade){
-        if (this.size > 0){
-            this.grades[this.size - 1] = lastGrade;
+    public int returnLastGrade(){
+        if (size > 0){
+            return grades[size - 1];
         }
-        return lastGrade;
+        return -1;
     }
-    public int averageGrade(int average, int sum) {
-       for (int i = 0; i<this.size; i++){
-           sum = sum + this.grades[i];
-           average = sum/this.size;
-
-        } return average;
-
-
+    public int averageGrade(){
+        int suma = 0;
+        for (int i = 0; i < size; i++){
+            suma = suma + grades[i];
+        }
+        return suma / size;
     }
 }
