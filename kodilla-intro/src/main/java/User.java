@@ -1,9 +1,9 @@
 public class User {
-    int wiek;
-    String imie;
-    public User (int wiek, String imie){
-        this.wiek = wiek;
-        this.imie = imie;
+    int age;
+    String name;
+    public User (int age, String name){
+        this.age = age;
+        this.name = name;
     }
     public static void main(String[] args){
         User Michal = new User(25, "Michal");
@@ -15,17 +15,17 @@ public class User {
         User[] users = {Michal, Kinga, Maciek, Martyna, Cezar};
         int numberOfElements = users.length;
 
-        int suma = 0;
+        int sum = 0;
         for (int i = 0; i < numberOfElements; i++){
-            suma = suma + users[i].wiek;
+            sum = sum + users[i].age;
         }
-        int srednia = 0;
-        srednia = suma / numberOfElements;
-        System.out.println(srednia);
+        int averageOfNumbers = 0;
+        averageOfNumbers = sum / numberOfElements;
+        System.out.println(averageOfNumbers);
 
         for (int i=0; i < numberOfElements; i++){
-            if (users[i].wiek < srednia){
-                System.out.println(users[i].imie);
+            if (users[i].age < averageOfNumbers){
+                System.out.println(users[i].name);
             }
         }
     }
