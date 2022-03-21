@@ -5,5 +5,6 @@ public class CalcApplication {
         System.out.println("Area of the Circle with radius 10 equals: " + area);
 
         double p = Calculator.PI;
-        System.out.println("The value of a pi constant is equal to " + p);        // [2]
-
+        System.out.println("The value of a pi constant is equal to " + p);
+    }
+ }
