@@ -1,12 +1,9 @@
 public class Book {
+    private String author;
+    private String title;
 
-    private static Book of(String author, String title) {
-        Book of = new Book();
-        return of;
-    }
-
-    public static Book of() {
-        Book book = Book.of("Issac Asimov", "The Galaxy");
+    public static Book of(String author, String title) {
+        Book book = Book.of("Isaac Asimov", "The Galaxy");
 
         return book;
     }
