@@ -9,6 +9,13 @@ public class Person {
         this.age = age;
     }
 
+    private Job job() {
+        Job mechanic = new Mechanic();
+        Job doctor = new Doctor();
+
+        return mechanic;
+    }
+
     public static void main(String[] args) {
         Person Michal = new Person("Michal", 25);
         Person Daniel = new Person("Daniel", 50);
@@ -16,10 +23,7 @@ public class Person {
 
         Person[] persons = {Michal, Daniel, Cristiano};
 
-        Job mechanic = new Mechanic();
-
         System.out.println(Michal.firstName);
-        System.out.println(mechanic.getResponsibilities());
 
 
     }
