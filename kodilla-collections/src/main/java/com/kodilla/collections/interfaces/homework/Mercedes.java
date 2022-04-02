@@ -2,33 +2,24 @@ package com.kodilla.collections.interfaces.homework;
 
 public class Mercedes implements Car {
 
-    private int speedMercedes;
-    private int newSpeedMercedes;
-    private int i = 0;
-    private int increaseSpeed;
-    private int decreaseSpeed;
+    private int speed;
 
-    public Mercedes(int speedMercedes) {
-        this.speedMercedes = speedMercedes;
+    public Mercedes(int speed) {
+        this.speed = speed;
     }
 
     @Override
     public int getSpeed() {
-        newSpeedMercedes = increaseSpeed - decreaseSpeed + speedMercedes;
-        return newSpeedMercedes;
+        return speed;
     }
 
     @Override
     public void increaseSpeed() {
-        for (i = 0; i < 3; i++) {
-            increaseSpeed = increaseSpeed + 5;
-        }
+        speed = speed + 10;
     }
 
     @Override
     public void decreaseSpeed() {
-        for (i = 0; i < 2; i++) {
-            decreaseSpeed = decreaseSpeed - 2;
-        }
+        speed = speed - 2;
     }
 }

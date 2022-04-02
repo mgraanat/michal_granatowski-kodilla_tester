@@ -15,9 +15,11 @@ public class BMW implements Car {
 
     @Override
     public void increaseSpeed() {
+        speed = speed + 8;
     }
 
     @Override
     public void decreaseSpeed() {
+        speed = speed - 2;
     }
 }
