@@ -6,9 +6,10 @@ import com.kodilla.collections.interfaces.homework.Car;
 import com.kodilla.collections.interfaces.homework.Mercedes;
 
 public class CarUtils {
-    public static void describeCar(Car car){
+    public static char describeCar(Car car){
         System.out.println("Car brand: " + getCarName(car));
         System.out.println("Car speed: " + car.getSpeed());
+        return '-';
     }
     public static String getCarName(Car car){
         if (car instanceof Mercedes)
@@ -20,5 +21,6 @@ public class CarUtils {
         else
             return "Unknown car name";
     }
+
 
 }
