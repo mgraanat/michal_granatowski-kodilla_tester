@@ -9,13 +9,8 @@ public class Person {
     public Person(String firstName, int age, Job job) {
         this.firstName = firstName;
         this.age = age;
+        this.job = job;
 
     }
-
-        Person Michal = new Person("Michal", 25, job);
-        Person Daniel = new Person("Daniel", 50, job);
-        Person Cristiano = new Person("Cristiano", 37, job);
-
-        Person[] persons = {Michal, Daniel, Cristiano};
 
 }
