@@ -7,7 +7,8 @@ public class BookManager {
 
     private static Set<Book> books = new HashSet<>();
 
-    public static Book createBook(String title, String author){
+    public static Book createBook(String title, String author) {
+        books.add(new Book(title, author));
         return new Book(title, author);
     }
 
