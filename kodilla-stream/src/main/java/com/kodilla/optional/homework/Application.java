@@ -11,8 +11,9 @@ public class Application {
         students.add(new Student("Marek Marek", new Teacher("Tomasz Tomasz")));
         students.add(new Student("Arek Arek", new Teacher(null)));
 
-        Student student = new Student("name1", new Teacher("name2"));
+        Teacher teacher = new Teacher("name1");
 
-        Optional<Student> optionalStudent = Optional.ofNullable(student);
+        Optional<Teacher> optionalTeacher = Optional.ofNullable(teacher);
+        String nameTeacher = optionalTeacher.orElse("<undefined>");
     }
 }
