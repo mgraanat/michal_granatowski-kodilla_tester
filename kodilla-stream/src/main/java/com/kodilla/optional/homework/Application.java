@@ -14,6 +14,5 @@ public class Application {
         Teacher teacher = new Teacher("name1");
 
         Optional<Teacher> optionalTeacher = Optional.ofNullable(teacher);
-        String nameTeacher = optionalTeacher.orElse("<undefined>");
     }
 }
