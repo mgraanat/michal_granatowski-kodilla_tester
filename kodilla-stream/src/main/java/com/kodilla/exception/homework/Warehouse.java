@@ -22,7 +22,7 @@ public class Warehouse {
     }
 
 
-    public boolean isOrderInUse (String order) throws OrderDoesntExistException {
+    public boolean isOrderInUse (Order order) throws OrderDoesntExistException {
         if (orders.contains(order))
             return orders.contains(order);
         throw  new OrderDoesntExistException();

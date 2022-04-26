@@ -8,7 +8,7 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("Order3"));
 
         try {
-            boolean isOrderCorrect = warehouse.isOrderInUse("Order3");
+            boolean isOrderCorrect = warehouse.isOrderInUse(new Order("Order3"));
             System.out.println("Order correct");
         } catch (OrderDoesntExistException e) {
             System.out.println("Order not correct");
