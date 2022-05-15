@@ -13,18 +13,14 @@ public class Warehouse {
         return new Order("");
     }
 
-    public Order getOrder(String number) {
+    public boolean getOrder(String number) throws OrderDoesntExistException {
         Order order = new Order(number);
-        return orders.stream()
+        orders.stream()
                 .filter(o -> o.getNumber().equals(number))
                 .findAny()
                 .orElse(null);
-    }
-
-
-    public boolean isOrderInUse (Order order) throws OrderDoesntExistException {
         if (orders.contains(order))
-            return orders.contains(order);
+           return orders.contains(order);
         throw  new OrderDoesntExistException();
     }
 }
