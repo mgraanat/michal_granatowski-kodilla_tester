@@ -9,8 +9,8 @@ public class Warehouse {
     public  List<Order> orders = new ArrayList<>();
 
     public  Order addOrder(Order order) {
-        orders.add(new Order(""));
-        return new Order("");
+        orders.add(order);
+        return new Order(order.number);
     }
 
     public boolean getOrder(String number) throws OrderDoesntExistException {
