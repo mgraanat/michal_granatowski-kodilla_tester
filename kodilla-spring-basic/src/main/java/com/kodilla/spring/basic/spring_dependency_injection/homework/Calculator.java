@@ -7,11 +7,31 @@ public class Calculator {
     public Display display;
 
     public Calculator(Display display) {
+
         this.display = display;
     }
 
-    public Double add(double a, double b){
-       display.display(a+b);
-        return this.display.display(a+b);
+    public Double add(double a, double b) {
+        double value = a+b;
+        display.display(value);
+        return value;
+    }
+
+    public Double subtract(double a, double b){
+        double value = a-b;
+        display.display(value);
+        return value;
+    }
+
+    public Double multiply(double a, double b){
+        double value = a*b;
+        display.display(value);
+        return value;
+    }
+
+    public Double divide(double a, double b){
+        double value = a/b;
+        display.display(value);
+        return value;
     }
 }

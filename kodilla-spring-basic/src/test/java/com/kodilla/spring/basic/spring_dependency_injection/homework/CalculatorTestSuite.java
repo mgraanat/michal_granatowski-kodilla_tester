@@ -16,7 +16,31 @@ public class CalculatorTestSuite {
     public void testAdd(){
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
         Calculator bean = context.getBean(Calculator.class);
-        Double value = bean.add(7,3);
+        double value = bean.add(7, 3);
         Assertions.assertEquals(10, value, 0.001);
+    }
+
+    @Test
+    public void testSubtract(){
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+        Calculator bean = context.getBean(Calculator.class);
+        double value = bean.subtract(7, 3);
+        Assertions.assertEquals(4, value, 0.001);
+    }
+
+    @Test
+    public void testSMultiply(){
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+        Calculator bean = context.getBean(Calculator.class);
+        double value = bean.multiply(7, 3);
+        Assertions.assertEquals(21, value, 0.001);
+    }
+
+    @Test
+    public void testDivide(){
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+        Calculator bean = context.getBean(Calculator.class);
+        double value = bean.divide(7, 7);
+        Assertions.assertEquals(1, value, 0.001);
     }
 }
