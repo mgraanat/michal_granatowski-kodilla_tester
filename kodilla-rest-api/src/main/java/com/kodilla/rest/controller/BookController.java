@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/books")
+public
 class BookController {
 
     private final BookService bookService;
