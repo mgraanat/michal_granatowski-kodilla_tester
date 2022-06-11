@@ -10,7 +10,7 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/numbers.csv", numLinesToSkip = 1)
-    public void numberCheck(int result){
-        assertTrue(result >= 0 && result <=6);
+    public void numberCheck(int result) {
+        assertTrue(result >= 0 && result <= 6);
     }
 }
