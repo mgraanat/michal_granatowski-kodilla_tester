@@ -7,4 +7,5 @@ include 'kodilla-stream'
 include 'kodilla-spring-basic'
 include 'kodilla-advanced-tests'
 include 'kodilla-rest-api'
+include 'kodilla-cucumber'
 

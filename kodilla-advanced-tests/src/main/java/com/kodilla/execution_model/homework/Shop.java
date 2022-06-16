@@ -8,47 +8,51 @@ public class Shop {
 
     private List<Order> orders = new ArrayList<>();
 
+
     public void addOrder(Order order) {
+
         this.orders.add(order);
     }
 
-    public void orderListTwoYears(LocalDate now, LocalDate twoYears) {
-        twoYears = now.minusYears(2);
-        for (int i = 0; i <= orders.size(); i++) {
+    public List<Order> orderListTwoYears(LocalDate now) {
+        LocalDate twoYears = now.minusYears(2);
+        for (Order order : orders) {
+            if (order.getDate().isAfter(LocalDate.now()) && order.getDate().isBefore(twoYears)) {
+                orders.add(order);
+            }
         }
+        return orders;
     }
 
 
-    public int minOrderValue() {
-        int min = 0;
-        for (int i = 0; i <= orders.size(); i++) {
-            if (i < min) {
-                min = i;
+    public List<Order> minOrderValue(int minOrderValue) {
+        List<Order> result = new ArrayList<>();
+        for (Order order : orders) {
+            if (order.orderValue == minOrderValue) {
+                result.add(order);
             }
-        }
-        return min;
+        } return result;
+
     }
 
-    public int maxOrderValue() {
-        int max = 0;
-        for (int i = 0; i <= orders.size(); i++) {
-            if (i > max) {
-                max = i;
+    public List<Order> maxOrderValue(int maxOrderValue) {
+        List<Order> result = new ArrayList<>();
+        for (Order order : orders) {
+            if (order.orderValue == maxOrderValue) {
+                result.add(order);
             }
-        }
-        return max;
+        } return result;
     }
 
     public int getSize() {
+
         return this.orders.size();
     }
 
-    public double getTotalValue() {
-        int sum = 0;
-        for (int i = 0; i < orders.size(); i++) {
-            sum = sum + 1;
-            sum += orders.get(i).getOrderValue();
-        }
-        return sum;
+    public int getTotalValue() {
+        return orders.stream()
+                .map(Order::getOrderValue)
+                .mapToInt(Integer:: intValue)
+                .sum();
     }
 }
