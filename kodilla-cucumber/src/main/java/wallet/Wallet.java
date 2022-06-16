@@ -12,4 +12,8 @@ public class Wallet {
     public int getBalance(){
         return balance;
     }
+
+    public String display(){
+        return "Account balance: " +"$"+ getBalance();
+    }
 }
